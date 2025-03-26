@@ -1,0 +1,51 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+scan_timeout = 150
+command_timeout = 1000
+
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$nodejs\
+$php\
+$fill[\uf109](blue)  $time( $memory_usage)( $batery)
+$character
+"""
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[↳](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = "[✖](bold red)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[[battery.display]]
+threshold = 20
+style = 'bold red'
+
+[directory]
+
+[fill]
+symbol = " "
+
+[memory_usage]
+threshold = 50
+disabled = false
+style = "cyan bold dimmed"
+
+[os]
+disabled = false
+
+[username]
+show_always = true
+
+[time]
+disabled = false
