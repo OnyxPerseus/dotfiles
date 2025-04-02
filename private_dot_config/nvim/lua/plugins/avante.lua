@@ -11,7 +11,7 @@ return {
         __inherited_from = 'openai',
         endpoint = 'https://openrouter.ai/api/v1',
         api_key_name = 'OPEN_ROUTER_KEY',
-        model = 'google/gemini-2.0-flash-thinking-exp:free',
+        model = 'google/gemini-2.0-flash-exp:free',
       },
     },
   },
