@@ -5,14 +5,15 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "openrouter",
-    vendors = {
-      openrouter = {
-        __inherited_from = 'openai',
-        endpoint = 'https://openrouter.ai/api/v1',
-        api_key_name = 'OPEN_ROUTER_KEY',
-        model = 'google/gemini-2.0-flash-exp:free',
-      },
+    provider = "copilot",
+    copilot = {
+      endpoint = "https://api.githubcopilot.com",
+      model = "claude-3.7-sonnet",
+      proxy = nil, -- [protocol://]host[:port] Use this proxy
+      allow_insecure = false, -- Allow insecure server connections
+      timeout = 30000, -- Timeout in milliseconds
+      temperature = 0,
+      max_tokens = 20480,
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`

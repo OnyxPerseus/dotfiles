@@ -1,1 +1,5 @@
-return {'github/copilot.vim'}
+return {
+  "zbirenbaum/copilot.lua",
+  event = "VeryLazy",
+  config = true
+}

@@ -15,8 +15,7 @@ $git_status\
 $nodejs\
 $php\
 $fill[\uf109](blue)  $time( $memory_usage)( $batery)
-$character
-"""
+$character"""
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
