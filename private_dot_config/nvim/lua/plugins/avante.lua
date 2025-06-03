@@ -5,16 +5,19 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "copilot",
-    copilot = {
-      endpoint = "https://api.githubcopilot.com",
-      model = "claude-3.7-sonnet",
-      proxy = nil, -- [protocol://]host[:port] Use this proxy
-      allow_insecure = false, -- Allow insecure server connections
-      timeout = 30000, -- Timeout in milliseconds
-      temperature = 0,
-      max_tokens = 20480,
-    },
+    providers = {
+      copilot = {
+        endpoint = "https://api.githubcopilot.com",
+        model = "gpt-4.1",
+        proxy = nil,            -- [protocol://]host[:port] Use this proxy
+        allow_insecure = false, -- Allow insecure server connections
+        timeout = 30000,        -- Timeout in milliseconds
+        extra_request_body = {
+          temperature = 0,
+          max_tokens = 20480,
+        }
+      }
+    }
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
@@ -26,7 +29,7 @@ return {
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
     "echasnovski/mini.pick", -- for file_selector provider mini.pick
-    "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+    "hrsh7th/nvim-cmp",      -- autocompletion for avante commands and mentions
     {
       -- support for image pasting
       "HakonHarnes/img-clip.nvim",

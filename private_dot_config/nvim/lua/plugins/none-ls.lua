@@ -9,6 +9,7 @@ return {
         noneLs.builtins.formatting.isort,
         noneLs.builtins.formatting.black,
         noneLs.builtins.formatting.phpcsfixer,
+        noneLs.builtins.formatting.google_java_format,
       },
     })
   end,
