@@ -5,6 +5,8 @@ return {
   opts = {
     -- add any opts here
     -- for example
+    mode = "legacy",
+    provider = "copilot",
     providers = {
       copilot = {
         endpoint = "https://api.githubcopilot.com",
