@@ -10,14 +10,21 @@ return {
     providers = {
       copilot = {
         endpoint = "https://api.githubcopilot.com",
-        model = "gpt-4.1",
+        model = "claude-3.7-sonnet",
         proxy = nil,            -- [protocol://]host[:port] Use this proxy
         allow_insecure = false, -- Allow insecure server connections
         timeout = 30000,        -- Timeout in milliseconds
+        context_window = 32000,
+        disable_tools = true,
         extra_request_body = {
-          temperature = 0,
+          temperature = 0.75,
           max_tokens = 20480,
         }
+      }
+    },
+    windows = {
+      input = {
+        height = 12
       }
     }
   },
